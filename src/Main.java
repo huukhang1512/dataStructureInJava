@@ -1,18 +1,16 @@
-import DataStructure.Map.Map;
+import DataStructure.Map.*;
+import DataStructure.Heap.*;
+
 public class Main {
     public static void main(String[] args) {
-        Map<Integer,Integer> map = new Map<>();
-        int[] testArr = {10,20,30,40,50,60,70,80,90,100};
-
-        for(int i = 0; i < 10;i++){
-//            System.out.println(i);
-            map.put(i,testArr[i]);
+//        Map<Integer,Integer> map = new Map<>();
+        MinHeap heap = new MinHeap();
+        for (int i = 0; i <= 30;i++){
+            heap.insert((int)Math.floor(Math.random()*(10-0+1)+0));
         }
 
-        map.put(3,10);
-        map.get(3);
-        for(int i = 0; i < 10;i++){
-            map.getHash(i);
-        }
+        heap.printHeap();
+
+
     }
 }
